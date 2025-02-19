@@ -15,7 +15,7 @@ const Header: React.FC<Props> = ({ fullWidth }) => {
         <Logo />
         <div className="nav">
           <ThemeToggle />
-          <NavBar />
+          {/* <NavBar /> */}
         </div>
       </div>
     </StyledWrapper>

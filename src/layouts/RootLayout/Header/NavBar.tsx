@@ -3,10 +3,10 @@ import Link from "next/link"
 import { CONFIG } from "site.config"
 
 const NavBar: React.FC = () => {
-  // const links = [
-    // { id: 1, name: "About", to: "/about" }
-  // ]
-  const links = CONFIG.navbar.links
+  const links = [
+    { id: 1, name: "About", to: "/about" }
+  ]
+  // const links = CONFIG.navbar.links
   return (
     <StyledWrapper className="">
       <ul>
