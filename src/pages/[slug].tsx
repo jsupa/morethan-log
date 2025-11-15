@@ -63,8 +63,8 @@ const DetailPage: NextPageWithLayout = () => {
   if (!post) return <CustomError />
 
   const image =
-    post.thumbnail ??
-    CONFIG.ogImageGenerateURL ??
+    (typeof post.thumbnail === 'string' ? post.thumbnail : undefined) ??
+    (typeof CONFIG.ogImageGenerateURL === 'string' ? CONFIG.ogImageGenerateURL : undefined) ??
     `${CONFIG.ogImageGenerateURL}/${encodeURIComponent(post.title)}.png`
 
   const date = post.date?.start_date || post.createdTime || ""
