@@ -5,6 +5,9 @@ import { TPost } from "src/types"
 const usePostsQuery = () => {
   const { data } = useQuery({
     queryKey: queryKey.posts(),
+    queryFn: () => {
+      throw new Error("This should not be called - data is prefetched via SSG")
+    },
     initialData: [] as TPost[],
     enabled: false,
   })

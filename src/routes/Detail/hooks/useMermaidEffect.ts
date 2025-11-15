@@ -31,14 +31,17 @@ const useMermaidEffect = () => {
 
   const { data, isFetched } = useQuery({
     queryKey: queryKey.scheme(),
+    queryFn: () => {
+      throw new Error("This should not be called - scheme is managed via setQueryData")
+    },
     enabled: false,
   })
 
   useEffect(() => {
-    if (!isFetched) return
+    if (!isFetched || !data) return
     mermaid.initialize({
       startOnLoad: true,
-      theme: (data as "dark" | "light") === "dark" ? "dark" : "default",
+      theme: data === "dark" ? "dark" : "default",
     })
 
     if (!document) return

@@ -8,6 +8,9 @@ const usePostQuery = () => {
   const { slug } = router.query
   const { data } = useQuery<PostDetail>({
     queryKey: queryKey.post(`${slug}`),
+    queryFn: () => {
+      throw new Error("This should not be called - data is prefetched via SSG")
+    },
     enabled: false,
   })
 

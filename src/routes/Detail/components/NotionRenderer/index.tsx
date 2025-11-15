@@ -12,7 +12,7 @@ import "prismjs/themes/prism-tomorrow.css"
 
 // used for rendering equations (optional)
 
-import "katex/dist/katex.min.css"
+// import "katex/dist/katex.min.css"
 import { FC } from "react"
 import styled from "@emotion/styled"
 

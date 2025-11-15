@@ -1,12 +1,12 @@
 const CONFIG = {
   // profile setting (required)
   profile: {
-    name: "spitik",
+    name: "Jakub Šupa",
     image: "/sensei.png", // If you want to create your own notion avatar, check out https://notion-avatar.vercel.app
-    role: "Ninja",
-    bio: "Sensei Wu's student",
-    email: "ezblog@kubov.email",
-    linkedin: "",
+    role: "Full Stack Developer",
+    bio: "Backend developer, Reverse engineer, Automation geek.",
+    email: "toto.je@kubov.email",
+    linkedin: "jsupa",
     instagram: "",
   },
   projects: false,
@@ -21,11 +21,12 @@ const CONFIG = {
   link: "https://ezblog.sk",
   since: 2022, // If leave this empty, current year will be used.
   lang: "en-US", // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES', 'ko-KR']
-  ogImageGenerateURL: "https://og-image-korean.vercel.app", // The link to generate OG image, don't end with a slash
+  // ogImageGenerateURL: "https://og-image-korean.vercel.app", // The link to generate OG image, don't end with a slash
+  ogImageGenerateURL: false,
 
   // notion configuration (required)
   notionConfig: {
-    pageId: '',
+    pageId: 'c8e24a6546534467aec61185a34dcf12',
   },
 
   // plugin configuration (optional)

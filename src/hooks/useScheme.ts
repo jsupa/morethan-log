@@ -13,6 +13,9 @@ const useScheme = (): [SchemeType, SetScheme] => {
 
   const { data } = useQuery({
     queryKey: queryKey.scheme(),
+    queryFn: () => {
+      throw new Error("This should not be called - scheme is managed via setQueryData")
+    },
     enabled: false,
     initialData: followsSystemTheme
       ? "dark"
